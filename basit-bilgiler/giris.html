@@ -74,7 +74,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Ana Sayfa</a></li><li class="chapter-item expanded affix "><li class="part-title">Basit Bilgiler</li><li class="chapter-item expanded "><a href="../basit-bilgiler/giris.html" class="active"><strong aria-hidden="true">1.</strong> Giriş</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../destekciler.html">Destekçiler</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Ana Sayfa</a></li><li class="chapter-item expanded affix "><li class="part-title">Basit Bilgiler</li><li class="chapter-item expanded "><a href="../basit-bilgiler/giris.html" class="active"><strong aria-hidden="true">1.</strong> Giriş</a></li><li class="chapter-item expanded "><a href="../basit-bilgiler/gereken-tecrube.html"><strong aria-hidden="true">2.</strong> Gereken Tecrübe</a></li><li class="chapter-item expanded "><a href="../basit-bilgiler/baslangic-hatalari.html"><strong aria-hidden="true">3.</strong> Başlangıç Hataları</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../destekciler.html">Destekçiler</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,9 +149,15 @@ değil, aynı zamanda topluluk ve arkadaşlıklar geliştirmekle de ilgilidir.</
 <ul>
 <li><a href="#i%C5%9Fletim-sistemi-nedir">İşletim sistemi nedir?</a></li>
 <li><a href="#%C3%A7ekirdek-nedir">Çekirdek nedir?</a></li>
+<li><a href="#kabuk-nedir">Kabuk nedir?</a></li>
+<li><a href="#gui-nedir">GUI nedir?</a>
+<ul>
+<li><a href="#masa%C3%BCst%C3%BC-ortam%C4%B1-pencere-y%C3%B6neticisi-widget-k%C3%BCt%C3%BCphanesi">Masaüstü Ortamı, Pencere Yöneticisi, Widget Kütüphanesi</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="İşletim-sistemi-nedir"><a class="header" href="#İşletim-sistemi-nedir">İşletim sistemi nedir?</a></h2>
-<p>İşletim sistemi, bir bilgisayar sisteminin ve kaynaklarının çalışmasını
+<p><em>İşletim sistemi,</em> bir bilgisayar sisteminin ve kaynaklarının çalışmasını
 kontrol eden bir yazılımdır. Diğer şeylerin yanı sıra, tüm işletim
 sistemlerinde ortak olan çok önemli bir kriter vardır:</p>
 <ul>
@@ -183,7 +189,7 @@ düzenleyebilen, dağıtım adı verilen birkaç farklı paketlenmiş biçimde g
 Bununla birlikte, hepsi aynı temel işletim sisteminin sürümleridir ve ayrı
 işletim sistemi olarak düşünülmemelidir.</p>
 <h2 id="Çekirdek-nedir"><a class="header" href="#Çekirdek-nedir">Çekirdek nedir?</a></h2>
-<p>Bir işletim sisteminin çekirdeği, asla göremeyeceğiniz bir şeydir. Temel olarak
+<p>Bir <em>işletim sisteminin çekirdeği</em>, asla göremeyeceğiniz bir şeydir. Temel olarak
 diğer programların yürütülmesini sağlar. Donanım ve yazılımlar tarafından oluşturulan
 olayları işler ve kaynaklara erişimi yönetir.</p>
 <p>Donanım olay işleyicileri <em>(event handler / interrupt handler)</em> örneğin az önce
@@ -193,6 +199,60 @@ uzayındaki programlar tarafından çağrılır. Her sistem çağrısı işleyic
 argümanların geçerli olup olmadığını kontrol etmeli ve ardından işlemi gerçekleştirmelidir.</p>
 <p>Çoğu kullanıcı programı doğrudan sistem çağrılarını çağırmaz, bunun yerine sistem çağrısını çağırma gibi
 işleri yapan standart bir kütüphane kullanır. (Örneğin, C fonksiyonu <code>fopen()</code> sonunda dosyayı gerçekten açan bir sistem çağrısını çağırır)</p>
+<h2 id="kabuk-nedir"><a class="header" href="#kabuk-nedir">Kabuk nedir?</a></h2>
+<p><em>Kabuk</em>, genellikle bir işletim sistemi dağıtımına entegre edilen ve insanlara
+arayüz sunan özel bir programdır. Kullanıcılara görünme şekli sistemden sisteme
+değişiklik gösterebilir (komut satırı, dosya gezgini vb.), ancak konsept her zaman aynıdır:</p>
+<ul>
+<li>Kullanıcının başlatılacak bir program seçmesine izin verme ve isteğe bağlı olarak ona oturuma özel argümanlar verme</li>
+<li>Dizinlerin içeriğini listelemek, dosyaları taşımak ve kopyalamak gibi yerel depolamadaki işlemlere izin verme.</li>
+</ul>
+<p>Bu eylemleri tamamlamak için kabuğun &quot; 'x' dosyasını aç; 'y' dosyasını aç ve eğer yoksa oluştur; X'ten içerik oku; Y'ye yaz; kapat&quot; gibi bir çok sayıda sistem çağrısı yapması gerekebilir.</p>
+<p>Modern kabuklar ayrıca aşağıdakiler gibi çeşitli özelliklere sahiptir:</p>
+<ul>
+<li><strong>Otomatik Tamamlama:</strong> TAB (veya tercih edilen başka bir tuş) tuşuna basıldığında,
+kullanıcının yazdığı sözcük geçerli bir kabuk komutu, dosya, dizine veya başka bir şeye
+tamamlanır. Otomatik tamamlama tuşuna birden çok basmak, diğer tamamlama olasılıkları
+arasında geçiş yapar.</li>
+<li><strong>Karakter Ekleme:</strong> Kullanıcı, yön tuşlarını kullanarak girdiği şeyde hareket edebilir.
+Bir cümlenin ortasına yeni karakterler yazabilir.</li>
+<li><strong>Kabuk Geçmişi:</strong> Yukarı ve aşağı ok tuşlarını kullanarak kullanıcı önceki girdilerde
+gezinebilir.</li>
+<li><strong>Kaydırma:</strong> Konsolun yüksekliğinden daha fazla satır olduğunda, çıktı bir arabelleğe
+kaydedilir ve kullanıcının konsolda yukarı ve aşağı kaydırmasına izin verilir.</li>
+<li><strong>Betik Oluşturma:</strong> Bazı kabukların özel betik dilleri vardır. Betik dillerine örnek
+olarak Bash veya DOS batch verilebilir.</li>
+</ul>
+<h2 id="gui-nedir"><a class="header" href="#gui-nedir">GUI nedir?</a></h2>
+<p>Grafiksel Kullanıcı Arayüzü, herhangi bir işletim sisteminin en görünür kısmıdır.
+Rolü basit bir çizim kütüphanesinin ötesine geçer; ayrıca şunları yapabilir:</p>
+<ul>
+<li>Kullanıcı girdi olaylarını (klavye, fare vb.) yakalama ve bunları uygun nesneye gönderme.</li>
+<li>Ekranın hangi bölümlerinin yeniden çizilmesi gerektiğini belirleyerek neyin ekranda nerede
+gösterileceğine ilişkin dahili bilgileri güncelleme.</li>
+<li>Gerekli kısımları yeniden çizerek görünen ekran içeriğini güncelleme.</li>
+<li>Bunları doğal, sezgisel ve kullanıcıya duyarlı bir şekilde yapma.</li>
+</ul>
+<h3 id="masaüstü-ortamı-pencere-yöneticisi-widget-kütüphanesi"><a class="header" href="#masaüstü-ortamı-pencere-yöneticisi-widget-kütüphanesi">Masaüstü Ortamı, Pencere Yöneticisi, Widget Kütüphanesi</a></h3>
+<p>Bir KDE veya Windows oturumuna başladığınızda, bu bir m<em>asaüstü ortamı</em>dır,
+yani tüm alt düzey işlevler için ortam sağlayan bir grafik kabuk.</p>
+<p>Sistemin çalışan çeşitli programların pencerelerini, yeniden
+boyutlandırma/kapama araçlarını, pencere kenarlıklarını, kaydırma
+çubuklarını vb. düzenlemekten sorumlu kısmı <em>Pencere Yöneticisi</em>'dir.</p>
+<p>Son olarak elemanların çizimini, belgelerin ekranda gösterilmesini vb.
+sağlayan alt sistemimiz var; buna genellikle widget kütüphanesi denir
+Ancak, widget kütüphanelerine genellikle bildirimsel diller biçiminde
+alternatifler vardır (örneğin, Qt'nin QML'si, Mozilla'nın XULU'u)</p>
+<h2 id="neden-bir-işletim-sistemi-geliştiriyorsunuz"><a class="header" href="#neden-bir-işletim-sistemi-geliştiriyorsunuz">Neden bir işletim sistemi geliştiriyorsunuz?</a></h2>
+<p>İnsanların işletim sistemi geliştirmeyi seçmelerinin çeşitli nedenleri vardır.
+Her bireysel geliştiricinin kendine ait olabilir, ancak bazı nedenler 
+geliştiriciler arasında ortaktır:</p>
+<ul>
+<li><strong>Makine üzerinde tam kontrole sahip olmak:</strong> Bir uygulama veya başka bir kullanıcı uzayı programı geliştirirken, geliştirici başkaları tarafından yazılan kodu dikkate almalıdır: işletim sistemi, kütüphaneler, diğer programlar, vb. Bir makinede çalışan tek kodun kendinize ait olması kesinlikle güzel bir duygudur!</li>
+<li><strong>Araştırma:</strong> Oldukça az sayıda işletim sistemi proje ödevi veya araştırma projesi olarak başlatılır. Araştırma projeleri genellikle mevcut işletim sistemlerini geliştirmek için yapılır. Ayrıca başlangıç seviyesindeki yaygın bir hata, bir işletim sistemini sıfırdan yazmak için gereken süreyi hafife almaktır.</li>
+<li><strong>Mevcut işletim sistemlerini değiştirmek için:</strong> Belki de geliştiricinin istediği belirli bir özelliğe sahip değillerdir. Belki de genellikle berbattırlar (Linux bloattır, Windows kararsızdır, vb.).</li>
+<li><strong>Çünkü eğlenceli:</strong> Düşük seviyeli programlama eğlenceli ve heyecan verici bir iştir, çünkü her şeyi kendinizin yapması gerekir. Bu daha zor görünebilir, ancak aynı nedenlerle daha da eğlencelidir. Her şeyin nasıl çalıştığını ve programınızın en içteki işleyişini biliyorsunuz.</li>
+</ul>
 
                     </main>
 
@@ -201,7 +261,7 @@ işleri yapan standart bir kütüphane kullanır. (Örneğin, C fonksiyonu <code
                             <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../destekciler.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../basit-bilgiler/gereken-tecrube.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -213,7 +273,7 @@ işleri yapan standart bir kütüphane kullanır. (Örneğin, C fonksiyonu <code
                     <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../destekciler.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../basit-bilgiler/gereken-tecrube.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
