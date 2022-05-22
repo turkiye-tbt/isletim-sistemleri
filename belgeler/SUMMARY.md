@@ -6,6 +6,11 @@
 - [Başlangıç Hataları](basit-bilgiler/baslangic-hatalari.md)
 - [Başlarken](basit-bilgiler/baslarken.md)
 - [İşleri Hangi Sırada Yapmalıyım?](basit-bilgiler/isleri-hangi-sirada-yapmaliyim.md)
+- [Eğitimler](basit-bilgiler/egitimler.md)
+
+# Eğitimler
+- [Bebek Adımları](egitimler/bebek-adimlari/README.md)
+	- [Adım 1](egitimler/bebek-adimlari/adim-1.md)
 
 ------
 [Destekçiler](destekciler.md)
