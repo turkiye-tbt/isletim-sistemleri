@@ -1,0 +1,15 @@
+[book]
+author = "Türkiye Teknolojik Belgeleme Topluluğu"
+description = "Türkçe teknolojik belgelerin genişletilmesi amacıyla kurulan topluluk."
+language = "tr"
+multilingual = false
+src = "belgeler"
+title = "Türkiye Teknolojik Belgeleme Topluluğu İşletim Sistemleri Belgeleri"
+
+[output.html]
+default-theme = "ayu"
+git-repository-url = "https://github.com/turkiye-tbt/isletim-sistemleri"
+edit-url-template = "https://github.com/turkiye-tbt/isletim-sistemleri/edit/main/{path}"
+
+[output.html.print]
+enable = false
