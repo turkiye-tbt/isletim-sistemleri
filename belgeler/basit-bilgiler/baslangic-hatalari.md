@@ -12,10 +12,10 @@ olmanızı sağlar.
 - [Burası ne **DEĞİLDİR?**](#burası-ne-değildir)
 - [Zor Bir Gerçek](#zor-bir-gerçek)
 	- [... hakkında eğitim var mı?](#-hakkında-bir-eğitim-var-mı)
-- [Kapsam]
+- [Kapsam](#kapsam)
 	- [Ticari İşletim Sistemi Geliştirme](#ticari-işletim-sistemi-geliştirme)
 	- [Cehaletten Kaçının](#cehaletten-kaçının)
-- [Tasarım]
+- [Tasarım](#tasarım)
 	- [GUI Tasarımı](#gui-tasarımı)
 	- [Popülerlik](#popülerlik)
 	- [Bellek kullanımı](#bellek-kullanımı)
