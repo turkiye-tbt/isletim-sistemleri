@@ -53,7 +53,7 @@ olmayan hiç kimse henüz işletim sistemi geliştirmeyi düşünmemelidir. Asse
 C gibi bir sistem dilinde birkaç yıllık düşük seviyeli kodlamayı içeren on yıllık bir programlama,
 konuyu üzerinde çalışacak kadar iyi anlamak için bile gerekli olan asgari miktardır.**
 
-Kendinizin binde bir olduğunuzu düşünüyorsanız, [Dunning-Kriger Etkisi](https://tr.wikipedia.org/wiki/Dunning-Kruger_etkisi)'ni okuyun ve konuyu tekrar düşünün.
+Kendinizin binde bir olduğunuzu düşünüyorsanız, [Dunning-Kruger Etkisi](https://tr.wikipedia.org/wiki/Dunning-Kruger_etkisi)'ni okuyun ve konuyu tekrar düşünün.
 
 Bu Belgeler'e katkıda bulunanların çoğu çok daha erken başladığı doğru olsa da, çoğumuz için bu,
 deneyim eksikliğinden kaynaklanan bir hataydı. Bu grubun öncülerinin çoğu, küçük bir işletim
